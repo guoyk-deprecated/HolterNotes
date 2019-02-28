@@ -1,0 +1,48 @@
+
+/* Class = "UITableViewSection"; footerTitle = "DESC_EXPORT_TXT"; ObjectID = "6gY-Lc-fj5"; */
+"6gY-Lc-fj5.footerTitle" = "DESC_EXPORT_TXT";
+
+/* Class = "UIButton"; normalTitle = "BTN_ADD"; ObjectID = "H45-1e-aPd"; */
+"H45-1e-aPd.normalTitle" = "添加记录";
+
+/* Class = "UILabel"; text = "BTN_EXPORT_TXT"; ObjectID = "K4c-MP-p6u"; */
+"K4c-MP-p6u.text" = "导出 TXT 文件";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "OAg-BS-9IV"; */
+"OAg-BS-9IV.title" = " ";
+
+/* Class = "UITableViewSection"; headerTitle = "TITLE_CONTENT"; ObjectID = "U8M-Gv-e0H"; */
+"U8M-Gv-e0H.headerTitle" = "内容";
+
+/* Class = "UINavigationItem"; title = "TITLE_ADD"; ObjectID = "VM5-r8-y2g"; */
+"VM5-r8-y2g.title" = "添加记录";
+
+/* Class = "UITableViewSection"; headerTitle = "TITLE_TIME"; ObjectID = "Xk3-wO-FTD"; */
+"Xk3-wO-FTD.headerTitle" = "时间";
+
+/* Class = "UILabel"; text = "BTN_DELETE_ALL"; ObjectID = "bkc-SB-BKt"; */
+"bkc-SB-BKt.text" = "删除全部";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "d0r-uJ-T1D"; */
+"d0r-uJ-T1D.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "TITLE_HOLTER_NOTES"; ObjectID = "dYh-hp-Wbc"; */
+"dYh-hp-Wbc.title" = "Holter 笔记";
+
+/* Class = "UINavigationItem"; title = "TITLE_SETTINGS"; ObjectID = "h8s-3a-vVr"; */
+"h8s-3a-vVr.title" = "设置";
+
+/* Class = "UILabel"; text = "DESC_EMPTY"; ObjectID = "juH-RA-wYE"; */
+"juH-RA-wYE.text" = "没有记录";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "lsh-Rj-efT"; */
+"lsh-Rj-efT.text" = "Detail";
+
+/* Class = "UILabel"; text = "BTN_DONE"; ObjectID = "mG1-y2-vZm"; */
+"mG1-y2-vZm.text" = "完成";
+
+/* Class = "UILabel"; text = "BTN_ABOUT"; ObjectID = "o2t-7g-wBi"; */
+"o2t-7g-wBi.text" = "关于";
+
+/* Class = "UITableViewSection"; footerTitle = "DESC_DELETE_ALL"; ObjectID = "unr-y5-Me6"; */
+"unr-y5-Me6.footerTitle" = "DESC_DELETE_ALL";

@@ -12,6 +12,7 @@
 		69815C2A22278DA800F475F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2922278DA800F475F9 /* SettingsViewController.swift */; };
 		69815C2D222794B100F475F9 /* NHPopSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2C222794B100F475F9 /* NHPopSegue.swift */; };
 		69815C2F2227959F00F475F9 /* NHDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2E2227959F00F475F9 /* NHDismissSegue.swift */; };
+		69815C382227A94E00F475F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69815C3A2227A94E00F475F9 /* InfoPlist.strings */; };
 		69B1F17D22266544006479F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F17C22266544006479F9 /* AppDelegate.swift */; };
 		69B1F18422266544006479F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B1F18222266544006479F9 /* Main.storyboard */; };
 		69B1F18622266545006479F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B1F18522266545006479F9 /* Assets.xcassets */; };
@@ -24,6 +25,12 @@
 		69815C2922278DA800F475F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		69815C2C222794B100F475F9 /* NHPopSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHPopSegue.swift; sourceTree = "<group>"; };
 		69815C2E2227959F00F475F9 /* NHDismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHDismissSegue.swift; sourceTree = "<group>"; };
+		69815C302227A2B000F475F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		69815C312227A2B000F475F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		69815C342227A39400F475F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		69815C352227A39400F475F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		69815C392227A94E00F475F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		69815C3B2227A95000F475F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		69B1F17922266544006479F9 /* HolterNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolterNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B1F17C22266544006479F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B1F18322266544006479F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +95,7 @@
 				69B1F18522266545006479F9 /* Assets.xcassets */,
 				69B1F18722266545006479F9 /* LaunchScreen.storyboard */,
 				69B1F18222266544006479F9 /* Main.storyboard */,
+				69815C3A2227A94E00F475F9 /* InfoPlist.strings */,
 			);
 			path = HolterNotes;
 			sourceTree = "<group>";
@@ -132,8 +140,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 69B1F17022266544006479F9;
 			productRefGroup = 69B1F17A22266544006479F9 /* Products */;
@@ -151,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69B1F18922266545006479F9 /* LaunchScreen.storyboard in Resources */,
+				69815C382227A94E00F475F9 /* InfoPlist.strings in Resources */,
 				69B1F18622266545006479F9 /* Assets.xcassets in Resources */,
 				69B1F18422266544006479F9 /* Main.storyboard in Resources */,
 			);
@@ -175,10 +184,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		69815C3A2227A94E00F475F9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69815C392227A94E00F475F9 /* en */,
+				69815C3B2227A95000F475F9 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		69B1F18222266544006479F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				69B1F18322266544006479F9 /* Base */,
+				69815C312227A2B000F475F9 /* zh-Hans */,
+				69815C352227A39400F475F9 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -187,6 +207,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				69B1F18822266545006479F9 /* Base */,
+				69815C302227A2B000F475F9 /* zh-Hans */,
+				69815C342227A39400F475F9 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -198,6 +220,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -259,6 +282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -317,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 328MP925VE;
 				INFOPLIST_FILE = HolterNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.landzero.HolterNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,6 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 328MP925VE;
 				INFOPLIST_FILE = HolterNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.landzero.HolterNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
