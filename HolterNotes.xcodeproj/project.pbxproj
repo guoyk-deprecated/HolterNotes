@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		690BA92D2226691F003B076D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BA92C2226691F003B076D /* MainTableViewController.swift */; };
-		690BA931222669EA003B076D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BA930222669EA003B076D /* AboutViewController.swift */; };
-		690BA93322266ECD003B076D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690BA93222266ECD003B076D /* SettingsViewController.swift */; };
+		69815C26222787A400F475F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C25222787A400F475F9 /* MainViewController.swift */; };
+		69815C2822278D8500F475F9 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2722278D8500F475F9 /* AddViewController.swift */; };
+		69815C2A22278DA800F475F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2922278DA800F475F9 /* SettingsViewController.swift */; };
+		69815C2D222794B100F475F9 /* NHPopSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2C222794B100F475F9 /* NHPopSegue.swift */; };
+		69815C2F2227959F00F475F9 /* NHDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2E2227959F00F475F9 /* NHDismissSegue.swift */; };
 		69B1F17D22266544006479F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F17C22266544006479F9 /* AppDelegate.swift */; };
 		69B1F18422266544006479F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B1F18222266544006479F9 /* Main.storyboard */; };
 		69B1F18622266545006479F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B1F18522266545006479F9 /* Assets.xcassets */; };
@@ -17,9 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		690BA92C2226691F003B076D /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		690BA930222669EA003B076D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		690BA93222266ECD003B076D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		69815C25222787A400F475F9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		69815C2722278D8500F475F9 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		69815C2922278DA800F475F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		69815C2C222794B100F475F9 /* NHPopSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHPopSegue.swift; sourceTree = "<group>"; };
+		69815C2E2227959F00F475F9 /* NHDismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHDismissSegue.swift; sourceTree = "<group>"; };
 		69B1F17922266544006479F9 /* HolterNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolterNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B1F17C22266544006479F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B1F18322266544006479F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69815C242227871500F475F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69815C25222787A400F475F9 /* MainViewController.swift */,
+				69815C2722278D8500F475F9 /* AddViewController.swift */,
+				69815C2922278DA800F475F9 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		69815C2B222794A200F475F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				69815C2C222794B100F475F9 /* NHPopSegue.swift */,
+				69815C2E2227959F00F475F9 /* NHDismissSegue.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		69B1F17022266544006479F9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +81,10 @@
 		69B1F17B22266544006479F9 /* HolterNotes */ = {
 			isa = PBXGroup;
 			children = (
+				69815C2B222794A200F475F9 /* Utils */,
+				69815C242227871500F475F9 /* Controllers */,
 				69B1F18A22266545006479F9 /* Info.plist */,
-				690BA930222669EA003B076D /* AboutViewController.swift */,
 				69B1F17C22266544006479F9 /* AppDelegate.swift */,
-				690BA92C2226691F003B076D /* MainTableViewController.swift */,
-				690BA93222266ECD003B076D /* SettingsViewController.swift */,
 				69B1F18522266545006479F9 /* Assets.xcassets */,
 				69B1F18722266545006479F9 /* LaunchScreen.storyboard */,
 				69B1F18222266544006479F9 /* Main.storyboard */,
@@ -141,10 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				690BA931222669EA003B076D /* AboutViewController.swift in Sources */,
-				690BA92D2226691F003B076D /* MainTableViewController.swift in Sources */,
+				69815C2D222794B100F475F9 /* NHPopSegue.swift in Sources */,
 				69B1F17D22266544006479F9 /* AppDelegate.swift in Sources */,
-				690BA93322266ECD003B076D /* SettingsViewController.swift in Sources */,
+				69815C26222787A400F475F9 /* MainViewController.swift in Sources */,
+				69815C2822278D8500F475F9 /* AddViewController.swift in Sources */,
+				69815C2F2227959F00F475F9 /* NHDismissSegue.swift in Sources */,
+				69815C2A22278DA800F475F9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
