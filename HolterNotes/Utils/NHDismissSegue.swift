@@ -18,6 +18,7 @@ class NHDismissSegue: UIStoryboardSegue {
     }
 
     override func perform() {
+        viewController?.view.endEditing(false)
         viewController?.dismiss(animated: true, completion: nil)
     }
 }

@@ -42,7 +42,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZXG-vZ-qp9" kind="show" id="k9H-pA-Fr1"/>
+                                    <segue destination="PTS-bx-tQh" kind="presentation" id="LXf-8y-YyV"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4up-le-TS8">
@@ -90,6 +90,7 @@
                     <navigationItem key="navigationItem" title="TITLE_HOLTER_NOTES" id="dYh-hp-Wbc">
                         <barButtonItem key="backBarButtonItem" title=" " id="OAg-BS-9IV"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="6Yw-jF-4IB">
+                            <color key="tintColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Ut4-bl-ofy" kind="presentation" id="6Zz-sB-XAQ"/>
                             </connections>
@@ -184,6 +185,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="TITLE_SETTINGS" id="h8s-3a-vVr">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="5Bz-GH-sO6">
+                            <color key="tintColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="egv-gy-Od9" kind="custom" customClass="NHDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="Zmt-g5-D7X"/>
                             </connections>
@@ -269,7 +271,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="BTN_DONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mG1-y2-vZm">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="49.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -277,7 +279,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="ZXG-vZ-qp9" kind="custom" customClass="NHPopSegue" customModule="HolterNotes" customModuleProvider="target" id="FS5-Kq-3pe"/>
+                                            <segue destination="ZXG-vZ-qp9" kind="custom" customClass="NHDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="A9h-cA-Q3e"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -288,7 +290,14 @@
                             <outlet property="delegate" destination="ZXG-vZ-qp9" id="WAS-Zt-dsF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TITLE_ADD" id="VM5-r8-y2g"/>
+                    <navigationItem key="navigationItem" title="TITLE_ADD" id="VM5-r8-y2g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="uF0-QQ-8n7">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="ZXG-vZ-qp9" kind="custom" customClass="NHDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="TTQ-TR-rrv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labelTimeLeft" destination="d0r-uJ-T1D" id="J7E-jl-ORR"/>
                         <outlet property="labelTimeRight" destination="lsh-Rj-efT" id="Cw4-if-7M7"/>
@@ -297,7 +306,27 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2n-qW-rJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2053.6231884057975" y="-581.25"/>
+            <point key="canvasLocation" x="3012" y="-518"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GV7-df-0At">
+            <objects>
+                <navigationController id="PTS-bx-tQh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bx1-Zl-2Oo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZXG-vZ-qp9" kind="relationship" relationship="rootViewController" id="6Wa-i2-DjE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kGs-gc-t5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2054" y="-518"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iec-Ul-hRC">
