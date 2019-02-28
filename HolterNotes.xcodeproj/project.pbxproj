@@ -10,9 +10,11 @@
 		69815C26222787A400F475F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C25222787A400F475F9 /* MainViewController.swift */; };
 		69815C2822278D8500F475F9 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2722278D8500F475F9 /* AddViewController.swift */; };
 		69815C2A22278DA800F475F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2922278DA800F475F9 /* SettingsViewController.swift */; };
-		69815C2D222794B100F475F9 /* NHPopSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2C222794B100F475F9 /* NHPopSegue.swift */; };
-		69815C2F2227959F00F475F9 /* NHDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2E2227959F00F475F9 /* NHDismissSegue.swift */; };
+		69815C2D222794B100F475F9 /* HNPopSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2C222794B100F475F9 /* HNPopSegue.swift */; };
+		69815C2F2227959F00F475F9 /* HNDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C2E2227959F00F475F9 /* HNDismissSegue.swift */; };
 		69815C382227A94E00F475F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69815C3A2227A94E00F475F9 /* InfoPlist.strings */; };
+		69815C3D2227BB6E00F475F9 /* HNFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69815C3C2227BB6E00F475F9 /* HNFormat.swift */; };
+		69815C402227BD0900F475F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 69815C422227BD0900F475F9 /* Localizable.strings */; };
 		69B1F17D22266544006479F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F17C22266544006479F9 /* AppDelegate.swift */; };
 		69B1F18422266544006479F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B1F18222266544006479F9 /* Main.storyboard */; };
 		69B1F18622266545006479F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B1F18522266545006479F9 /* Assets.xcassets */; };
@@ -23,14 +25,17 @@
 		69815C25222787A400F475F9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		69815C2722278D8500F475F9 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		69815C2922278DA800F475F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		69815C2C222794B100F475F9 /* NHPopSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHPopSegue.swift; sourceTree = "<group>"; };
-		69815C2E2227959F00F475F9 /* NHDismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHDismissSegue.swift; sourceTree = "<group>"; };
+		69815C2C222794B100F475F9 /* HNPopSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNPopSegue.swift; sourceTree = "<group>"; };
+		69815C2E2227959F00F475F9 /* HNDismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNDismissSegue.swift; sourceTree = "<group>"; };
 		69815C302227A2B000F475F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		69815C312227A2B000F475F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		69815C342227A39400F475F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		69815C352227A39400F475F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		69815C392227A94E00F475F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		69815C3B2227A95000F475F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		69815C3C2227BB6E00F475F9 /* HNFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNFormat.swift; sourceTree = "<group>"; };
+		69815C412227BD0900F475F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		69815C432227BD0B00F475F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		69B1F17922266544006479F9 /* HolterNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolterNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B1F17C22266544006479F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69B1F18322266544006479F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,8 +68,9 @@
 		69815C2B222794A200F475F9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				69815C2C222794B100F475F9 /* NHPopSegue.swift */,
-				69815C2E2227959F00F475F9 /* NHDismissSegue.swift */,
+				69815C2C222794B100F475F9 /* HNPopSegue.swift */,
+				69815C2E2227959F00F475F9 /* HNDismissSegue.swift */,
+				69815C3C2227BB6E00F475F9 /* HNFormat.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -96,6 +102,7 @@
 				69B1F18722266545006479F9 /* LaunchScreen.storyboard */,
 				69B1F18222266544006479F9 /* Main.storyboard */,
 				69815C3A2227A94E00F475F9 /* InfoPlist.strings */,
+				69815C422227BD0900F475F9 /* Localizable.strings */,
 			);
 			path = HolterNotes;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 			files = (
 				69B1F18922266545006479F9 /* LaunchScreen.storyboard in Resources */,
 				69815C382227A94E00F475F9 /* InfoPlist.strings in Resources */,
+				69815C402227BD0900F475F9 /* Localizable.strings in Resources */,
 				69B1F18622266545006479F9 /* Assets.xcassets in Resources */,
 				69B1F18422266544006479F9 /* Main.storyboard in Resources */,
 			);
@@ -172,11 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69815C2D222794B100F475F9 /* NHPopSegue.swift in Sources */,
+				69815C2D222794B100F475F9 /* HNPopSegue.swift in Sources */,
 				69B1F17D22266544006479F9 /* AppDelegate.swift in Sources */,
+				69815C3D2227BB6E00F475F9 /* HNFormat.swift in Sources */,
 				69815C26222787A400F475F9 /* MainViewController.swift in Sources */,
 				69815C2822278D8500F475F9 /* AddViewController.swift in Sources */,
-				69815C2F2227959F00F475F9 /* NHDismissSegue.swift in Sources */,
+				69815C2F2227959F00F475F9 /* HNDismissSegue.swift in Sources */,
 				69815C2A22278DA800F475F9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +200,15 @@
 				69815C3B2227A95000F475F9 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		69815C422227BD0900F475F9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69815C412227BD0900F475F9 /* en */,
+				69815C432227BD0B00F475F9 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		69B1F18222266544006479F9 /* Main.storyboard */ = {

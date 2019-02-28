@@ -1,5 +1,5 @@
 //
-//  NHPopSegue.swift
+//  HNPopSegue.swift
 //  HolterNotes
 //
 //  Created by Yanke Guo on 2019/2/28.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NHPopSegue: UIStoryboardSegue {
+class HNPopSegue: UIStoryboardSegue {
     var viewController: UIViewController?
 
     override init(identifier: String?, source: UIViewController, destination: UIViewController) {

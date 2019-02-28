@@ -187,7 +187,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="5Bz-GH-sO6">
                             <color key="tintColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="egv-gy-Od9" kind="custom" customClass="NHDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="Zmt-g5-D7X"/>
+                                <segue destination="egv-gy-Od9" kind="custom" customClass="HNDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="Zmt-g5-D7X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -207,11 +207,11 @@
                         <sections>
                             <tableViewSection headerTitle="TITLE_TIME" id="Xk3-wO-FTD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="d0r-uJ-T1D" detailTextLabel="lsh-Rj-efT" style="IBUITableViewCellStyleValue1" id="kgG-qb-PaM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="d0r-uJ-T1D" detailTextLabel="lsh-Rj-efT" style="IBUITableViewCellStyleValue1" id="kgG-qb-PaM">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kgG-qb-PaM" id="v8d-lq-g5v">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d0r-uJ-T1D">
@@ -222,10 +222,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lsh-Rj-efT">
-                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                                    <rect key="frame" x="334.5" y="13" width="41.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -279,7 +279,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="ZXG-vZ-qp9" kind="custom" customClass="NHDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="A9h-cA-Q3e"/>
+                                            <segue destination="ZXG-vZ-qp9" kind="custom" customClass="HNDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="A9h-cA-Q3e"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -294,7 +294,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="uF0-QQ-8n7">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ZXG-vZ-qp9" kind="custom" customClass="NHDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="TTQ-TR-rrv"/>
+                                <segue destination="ZXG-vZ-qp9" kind="custom" customClass="HNDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="TTQ-TR-rrv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -306,7 +306,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2n-qW-rJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012" y="-518"/>
+            <point key="canvasLocation" x="3011.594202898551" y="-518.30357142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GV7-df-0At">

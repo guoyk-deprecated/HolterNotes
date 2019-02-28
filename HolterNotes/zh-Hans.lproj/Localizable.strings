@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  HolterNotes
+
+  Created by Yanke Guo on 2019/2/28.
+  Copyright © 2019 Yanke Guo. All rights reserved.
+*/
+
+"time-ago.just_now" = "刚刚";
+
+"time-ago.seconds_ago" = "__DIGITS__秒前";
+
+"time-ago.minutes_ago" = "__DIGITS__分钟前";
+
+"time-ago.hours_ago" = "__DIGITS__小时前";
+
+"time-ago.days_ago" = "__DIGITS__天前";
+
+"time-ago.seconds_later" = "__DIGITS__秒后";
+
+"time-ago.minutes_later" = "__DIGITS__分钟后";
+
+"time-ago.hours_later" = "__DIGITS__小时后";
+
+"time-ago.days_later" = "__DIGITS__天后";
