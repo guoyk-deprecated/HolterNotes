@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import RealmSwift
 
-class AddViewController: UITableViewController {
+class AddViewController: UITableViewController, DatePickerViewControllerDelegate {
     @IBOutlet
     var textViewContent: UITextView?
 
@@ -18,21 +19,19 @@ class AddViewController: UITableViewController {
     @IBOutlet
     var labelTimeRight: UILabel?
 
-    var time: Date = Date() {
+    var date: Date = Date() {
         didSet {
-            labelTimeLeft?.text = HNFormat(date: time)
-            labelTimeRight?.text = "(" + HNFormat(timeInterval: Date().timeIntervalSince(time)) + ")"
+            labelTimeLeft?.text = HNFormat(date: date)
+            labelTimeRight?.text = "(" + HNFormat(timeInterval: Date().timeIntervalSince(date)) + ")"
         }
     }
-
-    var content: String = ""
 
     var timer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        time = Date()
+        date = Date()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -59,8 +58,13 @@ class AddViewController: UITableViewController {
         if indexPath.section == 0, indexPath.row == 0 {}
 
         if indexPath.section == 2, indexPath.row == 0 {
+            print("SUBMIT")
             submit()
         }
+    }
+
+    func datePickerViewController(_: DatePickerViewController, dateDidUpdated date: Date) {
+        self.date = date
     }
 
     func startTimer() {
@@ -78,10 +82,26 @@ class AddViewController: UITableViewController {
 
     @objc
     func onTimerTicked(timer t: Timer) {
-        labelTimeRight?.text = "(" + HNFormat(timeInterval: t.fireDate.timeIntervalSince(time)) + ")"
+        labelTimeRight?.text = "(" + HNFormat(timeInterval: t.fireDate.timeIntervalSince(date)) + ")"
     }
 
     func submit() {
-        // TODO: implementes submit
+        let realm = try! Realm()
+        let entry = Entry()
+        entry.date = date
+        entry.content = textViewContent?.text ?? "..."
+        try! realm.write {
+            realm.add(entry)
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        if segue.identifier == "date-picker" {
+            let controller = segue.destination as! DatePickerViewController
+            controller.date = date
+            controller.delegate = self
+        }
     }
 }

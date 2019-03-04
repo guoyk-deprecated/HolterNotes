@@ -1,12 +1,12 @@
 
 /* Class = "UITableViewSection"; footerTitle = "DESC_EXPORT_TXT"; ObjectID = "6gY-Lc-fj5"; */
-"6gY-Lc-fj5.footerTitle" = "DESC_EXPORT_TXT";
+"6gY-Lc-fj5.footerTitle" = "Export all entries as a TXT file, with UTF-8 encoding";
 
 /* Class = "UIButton"; normalTitle = "BTN_ADD"; ObjectID = "H45-1e-aPd"; */
 "H45-1e-aPd.normalTitle" = "Add Entry";
 
 /* Class = "UILabel"; text = "BTN_EXPORT_TXT"; ObjectID = "K4c-MP-p6u"; */
-"K4c-MP-p6u.text" = "Export TXT file";
+"K4c-MP-p6u.text" = "Export as TXT file";
 
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "OAg-BS-9IV"; */
 "OAg-BS-9IV.title" = " ";
@@ -45,4 +45,8 @@
 "o2t-7g-wBi.text" = "About";
 
 /* Class = "UITableViewSection"; footerTitle = "DESC_DELETE_ALL"; ObjectID = "unr-y5-Me6"; */
-"unr-y5-Me6.footerTitle" = "DESC_DELETE_ALL";
+"unr-y5-Me6.footerTitle" = "Delete all entries, cannot recovery";
+
+"6as-1T-bFR.text" = "Date and Time";
+
+"VVV-fT-p34.text" = "Second";
