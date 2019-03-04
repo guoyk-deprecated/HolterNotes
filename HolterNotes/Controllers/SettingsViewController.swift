@@ -59,6 +59,10 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
             controller.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
             navigationController!.present(controller, animated: true, completion: nil)
         }
+        
+        if indexPath.section == 2 {
+            UIApplication.shared.open(URL(string: "https://yankeguo.github.io/HolterNotes")!, options: [:], completionHandler: nil)
+        }
     }
 
     func numberOfPreviewItems(in _: QLPreviewController) -> Int {
