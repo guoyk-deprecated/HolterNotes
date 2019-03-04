@@ -50,6 +50,11 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
                                                message: NSLocalizedString("this_action_cannot_be_undo", comment: ""),
                                                preferredStyle: .actionSheet)
             controller.addAction(UIAlertAction(title: NSLocalizedString("delete_all", comment: ""), style: .destructive, handler: { _ in
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.deleteAll()
+                }
+                self.dismiss(animated: true, completion: nil)
             }))
             controller.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
             navigationController!.present(controller, animated: true, completion: nil)
