@@ -6,43 +6,42 @@
 //  Copyright © 2019 Yanke Guo. All rights reserved.
 //
 
-import UIKit
 import RealmSwift
+import UIKit
 
 class MainCell: UITableViewCell {
-    
     @IBOutlet
     var dateLabel: UILabel?
-    
+
     @IBOutlet
     var contentLabel: UILabel?
-    
 }
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet
     var tableView: UITableView?
-    
+
     @IBOutlet
     var buttonAdd: UIButton?
 
     @IBOutlet
     var labelEmpty: UILabel?
-    
+
     var results: Results<Entry>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let realm = try! Realm()
-        
-        self.results = realm.objects(Entry.self).sorted(byKeyPath: "date", ascending: false)
+
+        results = realm.objects(Entry.self).sorted(byKeyPath: "date", ascending: false)
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         tableView?.reloadData()
+        labelEmpty?.isHidden = !results.isEmpty
     }
 
     override func viewDidLayoutSubviews() {
@@ -66,15 +65,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.contentLabel?.text = results[indexPath.row].content
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+
+    func tableView(_: UITableView, estimatedHeightForRowAt _: IndexPath) -> CGFloat {
         return 80
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let realm = try! Realm()
@@ -83,11 +82,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 realm.delete(entry)
             }
             tableView.deleteRows(at: [indexPath], with: .fade)
+            labelEmpty?.isHidden = !results.isEmpty
         }
     }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+
+    func tableView(_: UITableView, canEditRowAt _: IndexPath) -> Bool {
         return true
     }
-    
 }

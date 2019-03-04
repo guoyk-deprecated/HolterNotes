@@ -6,7 +6,7 @@
 "H45-1e-aPd.normalTitle" = "Add Entry";
 
 /* Class = "UILabel"; text = "BTN_EXPORT_TXT"; ObjectID = "K4c-MP-p6u"; */
-"K4c-MP-p6u.text" = "Export as TXT file";
+"K4c-MP-p6u.text" = "Export as TXT File";
 
 /* Class = "UIBarButtonItem"; title = " "; ObjectID = "OAg-BS-9IV"; */
 "OAg-BS-9IV.title" = " ";
@@ -21,7 +21,7 @@
 "Xk3-wO-FTD.headerTitle" = "Time";
 
 /* Class = "UILabel"; text = "BTN_DELETE_ALL"; ObjectID = "bkc-SB-BKt"; */
-"bkc-SB-BKt.text" = "Delete all entries";
+"bkc-SB-BKt.text" = "Delete All Entries";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "d0r-uJ-T1D"; */
 "d0r-uJ-T1D.text" = "Title";

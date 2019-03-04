@@ -6,8 +6,8 @@
 //  Copyright © 2019 Yanke Guo. All rights reserved.
 //
 
-import UIKit
 import RealmSwift
+import UIKit
 
 class AddViewController: UITableViewController, DatePickerViewControllerDelegate {
     @IBOutlet
@@ -58,7 +58,6 @@ class AddViewController: UITableViewController, DatePickerViewControllerDelegate
         if indexPath.section == 0, indexPath.row == 0 {}
 
         if indexPath.section == 2, indexPath.row == 0 {
-            print("SUBMIT")
             submit()
         }
     }
@@ -90,6 +89,10 @@ class AddViewController: UITableViewController, DatePickerViewControllerDelegate
         let entry = Entry()
         entry.date = date
         entry.content = textViewContent?.text ?? "..."
+        entry.content = entry.content.trimmingCharacters(in: .whitespacesAndNewlines)
+        if entry.content.isEmpty {
+            entry.content = "(" + NSLocalizedString("no_content", comment: "") + ")"
+        }
         try! realm.write {
             realm.add(entry)
         }

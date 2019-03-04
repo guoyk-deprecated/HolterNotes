@@ -7,9 +7,8 @@
 //
 
 import QuickLook
+import RealmSwift
 import UIKit
-
-let demoString = "Hello World\nHello World2\nHello World3"
 
 class ExportPreviewItem: NSObject, QLPreviewItem {
     init(url: URL) {
@@ -20,21 +19,40 @@ class ExportPreviewItem: NSObject, QLPreviewItem {
 }
 
 class SettingsViewController: UITableViewController, QLPreviewControllerDataSource {
-    var exportFileURL: URL?
+    let exportFileURL: URL = HNExportFileURL(forDate: Date())
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if indexPath.section == 0 {
-            let fileURL = HNExportFileURL(forDate: Date())
+            // delete existing
+            try! FileManager.default.removeItem(at: exportFileURL)
 
-            exportFileURL = fileURL
+            // output
+            var output = ""
+            let realm = try! Realm()
+            let results = realm.objects(Entry.self).sorted(byKeyPath: "date", ascending: true)
+            results.forEach { entry in
+                output = output + HNFormat(date: entry.date) + " " + entry.content + "\r\n"
+            }
 
-            try! demoString.write(to: fileURL, atomically: true, encoding: .utf8)
+            // write new
+            try! output.write(to: exportFileURL, atomically: true, encoding: .utf8)
 
+            // display file
             let controller = QLPreviewController()
             controller.dataSource = self
             navigationController?.pushViewController(controller, animated: true)
+        }
+
+        if indexPath.section == 1 {
+            let controller = UIAlertController(title: NSLocalizedString("confirm_to_delete", comment: ""),
+                                               message: NSLocalizedString("this_action_cannot_be_undo", comment: ""),
+                                               preferredStyle: .actionSheet)
+            controller.addAction(UIAlertAction(title: NSLocalizedString("delete_all", comment: ""), style: .destructive, handler: { _ in
+            }))
+            controller.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
+            navigationController!.present(controller, animated: true, completion: nil)
         }
     }
 
@@ -43,6 +61,6 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
     }
 
     func previewController(_ controller: QLPreviewController, previewItemAt _: Int) -> QLPreviewItem {
-        return ExportPreviewItem(url: exportFileURL!)
+        return ExportPreviewItem(url: exportFileURL)
     }
 }

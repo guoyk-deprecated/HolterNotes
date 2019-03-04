@@ -6,6 +6,16 @@
   Copyright © 2019 Yanke Guo. All rights reserved.
 */
 
+"no_content" = "无内容";
+
+"cancel" = "取消";
+
+"confirm_to_delete" = "确认删除？";
+
+"delete_all" = "删除全部记录";
+
+"this_action_cannot_be_undo" = "这项操作无法被撤销";
+
 "time-ago.just_now" = "刚刚";
 
 "time-ago.seconds_ago" = "__DIGITS__秒前";
