@@ -6,6 +6,10 @@
   Copyright © 2019 Yanke Guo. All rights reserved.
 */
 
+"no_entries" = "没有记录";
+
+"ok" = "好的";
+
 "no_content" = "无内容";
 
 "cancel" = "取消";

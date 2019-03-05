@@ -216,7 +216,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="TITLE_SETTINGS" id="h8s-3a-vVr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="5Bz-GH-sO6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="5Bz-GH-sO6">
                             <color key="tintColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="egv-gy-Od9" kind="custom" customClass="HNDismissSegue" customModule="HolterNotes" customModuleProvider="target" id="Zmt-g5-D7X"/>

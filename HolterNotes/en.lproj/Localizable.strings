@@ -6,6 +6,10 @@
   Copyright © 2019 Yanke Guo. All rights reserved.
 */
 
+"no_entries" = "No Entries";
+
+"ok" = "OK";
+
 "no_content" = "no content";
 
 "confirm_to_delete" = "Confirm to Delete ?";

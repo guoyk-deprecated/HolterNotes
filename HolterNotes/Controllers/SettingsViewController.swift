@@ -8,6 +8,7 @@
 
 import QuickLook
 import RealmSwift
+import SafariServices
 import UIKit
 
 class ExportPreviewItem: NSObject, QLPreviewItem {
@@ -25,9 +26,6 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
         tableView.deselectRow(at: indexPath, animated: true)
 
         if indexPath.section == 0 {
-            // delete existing
-            try! FileManager.default.removeItem(at: exportFileURL)
-
             // output
             var output = ""
             let realm = try! Realm()
@@ -36,13 +34,19 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
                 output = output + HNFormat(date: entry.date) + " " + entry.content + "\r\n"
             }
 
-            // write new
-            try! output.write(to: exportFileURL, atomically: true, encoding: .utf8)
+            if output.isEmpty {
+                let alert = UIAlertController(title: NSLocalizedString("no_entries", comment: ""), message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .cancel, handler: nil))
+                navigationController!.present(alert, animated: true, completion: nil)
+            } else {
+                // write new
+                try! output.write(to: exportFileURL, atomically: true, encoding: .utf8)
 
-            // display file
-            let controller = QLPreviewController()
-            controller.dataSource = self
-            navigationController?.pushViewController(controller, animated: true)
+                // display file
+                let controller = QLPreviewController()
+                controller.dataSource = self
+                navigationController?.pushViewController(controller, animated: true)
+            }
         }
 
         if indexPath.section == 1 {
@@ -59,9 +63,12 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
             controller.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
             navigationController!.present(controller, animated: true, completion: nil)
         }
-        
+
         if indexPath.section == 2 {
-            UIApplication.shared.open(URL(string: "https://yankeguo.github.io/HolterNotes")!, options: [:], completionHandler: nil)
+            let controller = SFSafariViewController(url: URL(string: "https://yankeguo.github.io/HolterNotes")!)
+            controller.dismissButtonStyle = .close
+            controller.preferredControlTintColor = navigationItem.rightBarButtonItem?.tintColor
+            navigationController?.present(controller, animated: true, completion: nil)
         }
     }
 
