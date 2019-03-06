@@ -45,7 +45,7 @@
 "o2t-7g-wBi.text" = "关于";
 
 /* Class = "UITableViewSection"; footerTitle = "DESC_DELETE_ALL"; ObjectID = "unr-y5-Me6"; */
-"unr-y5-Me6.footerTitle" = "删除全部项目，无法恢复";
+"unr-y5-Me6.footerTitle" = "删除全部项目，无法撤销";
 
 "6as-1T-bFR.text" = "日期和时间";
 

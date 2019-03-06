@@ -36,7 +36,7 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
 
             if output.isEmpty {
                 let alert = UIAlertController(title: NSLocalizedString("no_entries", comment: ""), message: nil, preferredStyle: .alert)
-                alert.view.tintColor = navigationItem.rightBarButtonItem?.tintColor
+                alert.view.tintColor = navigationController!.navigationBar.tintColor
                 alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .cancel, handler: nil))
                 navigationController!.present(alert, animated: true, completion: nil)
             } else {
@@ -59,9 +59,9 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
                 try! realm.write {
                     realm.deleteAll()
                 }
-                self.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
             }))
-            alert.view.tintColor = navigationItem.rightBarButtonItem?.tintColor
+            alert.view.tintColor = navigationController!.navigationBar.tintColor
             alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
             navigationController!.present(alert, animated: true, completion: nil)
         }
@@ -69,7 +69,7 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
         if indexPath.section == 2 {
             let controller = SFSafariViewController(url: URL(string: "https://yankeguo.github.io/HolterNotes")!)
             controller.dismissButtonStyle = .close
-            controller.preferredControlTintColor = navigationItem.rightBarButtonItem?.tintColor
+            controller.preferredControlTintColor = navigationController!.navigationBar.tintColor
             navigationController?.present(controller, animated: true, completion: nil)
         }
     }

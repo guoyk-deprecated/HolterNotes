@@ -45,7 +45,7 @@
 "o2t-7g-wBi.text" = "About";
 
 /* Class = "UITableViewSection"; footerTitle = "DESC_DELETE_ALL"; ObjectID = "unr-y5-Me6"; */
-"unr-y5-Me6.footerTitle" = "Delete all entries, cannot recovery";
+"unr-y5-Me6.footerTitle" = "Delete all entries, can not be undone";
 
 "6as-1T-bFR.text" = "Date and Time";
 
