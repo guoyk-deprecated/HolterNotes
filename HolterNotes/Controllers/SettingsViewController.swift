@@ -36,6 +36,7 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
 
             if output.isEmpty {
                 let alert = UIAlertController(title: NSLocalizedString("no_entries", comment: ""), message: nil, preferredStyle: .alert)
+                alert.view.tintColor = navigationItem.rightBarButtonItem?.tintColor
                 alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .cancel, handler: nil))
                 navigationController!.present(alert, animated: true, completion: nil)
             } else {
@@ -50,18 +51,19 @@ class SettingsViewController: UITableViewController, QLPreviewControllerDataSour
         }
 
         if indexPath.section == 1 {
-            let controller = UIAlertController(title: NSLocalizedString("confirm_to_delete", comment: ""),
-                                               message: NSLocalizedString("this_action_cannot_be_undo", comment: ""),
-                                               preferredStyle: .actionSheet)
-            controller.addAction(UIAlertAction(title: NSLocalizedString("delete_all", comment: ""), style: .destructive, handler: { _ in
+            let alert = UIAlertController(title: NSLocalizedString("confirm_to_delete", comment: ""),
+                                          message: NSLocalizedString("this_action_cannot_be_undo", comment: ""),
+                                          preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("delete_all", comment: ""), style: .destructive, handler: { _ in
                 let realm = try! Realm()
                 try! realm.write {
                     realm.deleteAll()
                 }
                 self.dismiss(animated: true, completion: nil)
             }))
-            controller.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
-            navigationController!.present(controller, animated: true, completion: nil)
+            alert.view.tintColor = navigationItem.rightBarButtonItem?.tintColor
+            alert.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil))
+            navigationController!.present(alert, animated: true, completion: nil)
         }
 
         if indexPath.section == 2 {
